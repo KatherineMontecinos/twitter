@@ -43,3 +43,9 @@ textarea {
 #contlista hr {
 	color: black;
 }
+
+.elementoBorrar {
+	float: right;
+}
+
+.elementoCheck

@@ -4,18 +4,24 @@ function agregaTarea() {
   var lista = document.createElement('div');
 
   var elementoLista = document.createElement('p');
-  var elementoLinea = document.createElement('br');
-  var elementoborrar = document.createElement('span');
+  
+  var elementoBorrar = document.createElement('span');
+  elementoBorrar.setAttribute("class", "glyphicon glyphicon-trash");
+  
+  var elementoCheck = document.createElement('input');
+  elementoCheck.type ='checkbox';
+  elementoCheck.setAttribute("class", "checkbox");
 
   var nodoTarea = document.createTextNode(tarea);
-  var nodoBorrar = document.createTextNode()
 
   elementoLista.appendChild(nodoTarea);
 
   lista.appendChild(elementoLista);
-  lista.appendChild(elementoLinea);
+  lista.appendChild(elementoBorrar);
+  lista.appendChild(elementoCheck);
 
-  lista.setAttribute("class", "lista");
+
+  lista.setAttribute("class", "lista", "elementoCheck", "elementoBorrar");
 
   contenedorLista.appendChild(lista);
 
