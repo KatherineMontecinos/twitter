@@ -1,12 +1,14 @@
 function agregaTarea() {
-  var tarea = getElementsById('cajalista');
-  var contenedorLista = getElementsById('contlista');
-  var lista = documentCreateElemente('div');
+  var tarea = document.getElementById('cajalista').value;
+  var contenedorLista = document.getElementById('contlista');
+  var lista = document.createElement('div');
 
   var elementoLista = document.createElement('p');
   var elementoLinea = document.createElement('br');
+  var elementoborrar = document.createElement('span');
 
-  var nodoTarea = createTextNodo(tarea);
+  var nodoTarea = document.createTextNode(tarea);
+  var nodoBorrar = document.createTextNode()
 
   elementoLista.appendChild(nodoTarea);
 

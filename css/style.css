@@ -35,11 +35,11 @@ textarea {
 
 }
 
-p {
+#contlista p {
 	font-size: 12px;
 	color: black;
 }
 
-hr {
+#contlista hr {
 	color: black;
 }
