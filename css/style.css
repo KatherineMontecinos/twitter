@@ -2,11 +2,6 @@
     box-sizing: border-box;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-}
-
 .head {
 	text-align: center;
 	background-color: rgb(24, 84, 203);
@@ -30,13 +25,15 @@ textarea {
     margin-bottom: 5%;
 }
 
-.agregar {
-	font-size: 25px;
-
+.trash {
+	float: right;
 }
 
-#contlista p {
-	font-size: 12px;
-	color: black;
+input {
+	display: inline;
+}
+p {
+	display: inline;
+	padding-left: 5%;
 }
 

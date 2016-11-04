@@ -3,20 +3,27 @@ function agregaTarea() {
   var contenedorLista = document.getElementById('contlista');
   var lista = document.createElement('div');
 
+  
+  var elementoCheck = document.createElement('input');
+  elementoCheck.type ='checkbox';
+
   var elementoLista = document.createElement('p');
-  var elementoLinea = document.createElement('br');
-  var elementoborrar = document.createElement('span');
+
+  var elementoBorrar = document.createElement('span');
+  elementoBorrar.setAttribute("class", "glyphicon glyphicon-trash pull-right");
 
   var nodoTarea = document.createTextNode(tarea);
-  var nodoBorrar = document.createTextNode()
 
   elementoLista.appendChild(nodoTarea);
 
+  
+  lista.appendChild(elementoCheck);
   lista.appendChild(elementoLista);
-  lista.appendChild(elementoLinea);
+  lista.appendChild(elementoBorrar);
 
-  lista.setAttribute("class", "lista");
+  lista.setAttribute("class", "elementoCheck", "lista", "elementoBorrar");
 
   contenedorLista.appendChild(lista);
 
 }
+
