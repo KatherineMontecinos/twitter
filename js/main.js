@@ -1,43 +1,43 @@
 function agregaTarea() {
+  var contenedor = document.getElementById('cont-nuevatarea');
   var tarea = document.getElementById('cajalista').value;
-  var contenedorLista = document.getElementById('contlista');
+  document.getElementById('cajalista').value="";
+ 
+
   var lista = document.createElement('div');
-
   var elementoCheck = document.createElement('input');
-  elementoCheck.type ='checkbox';
+  var contlista = document.createElement('span');
+  var nodoTarea = document.createTextNode(tarea); // hijo del contenedor
+  var eliminar_span = document.createElement('i'); // basurero icono
+  var corazon_span = document.createElement('i'); // corazon icono
   
+  lista.classList.add("lista", "row");
+  elementoCheck.setAttribute("type", "checkbox");
+  contlista.classList.add("span", "textolista");
+  eliminar_span.classList.add("glyphicon", "glyphicon-trash");
+  corazon_span.classList.add("glyphicon", "glyphicon-heart");
 
-  var elementoBorrar = document.createElement('span');
-  elementoBorrar.setAttribute("class", "glyphicon glyphicon-trash pull-right");
 
-  var elementoLista = document.createElement('p');
-
-  var nodoTarea = document.createTextNode(tarea);
-
-  elementoLista.appendChild(nodoTarea);
-  
   lista.appendChild(elementoCheck);
-  lista.appendChild(elementoLista);
-  lista.appendChild(elementoBorrar);
+  contlista.appendChild(nodoTarea);
+  lista.appendChild(contlista);
+  lista.appendChild(eliminar_span);
+  lista.appendChild(corazon_span);
+  contenedor.appendChild(lista);
 
-  lista.setAttribute("class", "lista","elementoCheck", "elementoBorrar");
-
-  contenedorLista.appendChild(lista);
-
-}
-
-  elementoCheck.onclick = tacharTarea;
-
-function tacharTarea() {
-  
-  checkbox.classList.toggle('tachado');
-}
-
-
-function borrar(){
-  var borrar = document.querySelector('span');
-  borrar.addEventListener('click', function(){
-    div.removeChild(lista);
+  // tachar
+  elementoCheck.addEventListener("click", function(){
+    contlista.classList.toggle("tachado");
   })
-}
 
+  // corazon 
+  corazon_span.addEventListener("click", function(){
+    corazon_span.classList.toggle("corazon");
+  })
+
+  //elimino basurero
+  eliminar_span.addEventListener("click", function(){
+    contenedor.removeChild(lista);
+  })
+
+}

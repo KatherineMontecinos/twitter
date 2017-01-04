@@ -4,23 +4,33 @@
 	<meta charset="utf-8">
 	<title>Twitter</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<section class="container">
 		<div class="row">	
-			<div class="col-md-6 col-md-offset-3">
-				<div class="head">
-					<h3>TODO APP</h3>
-				</div>
-				<textarea class="form-control" id="cajalista" name="tarea" rows="3"></textarea>
-				 
-				<button class="btn-primary btn-lg glyphicon glyphicon-plus-sign" onclick="agregaTarea()">Agregar</button>
-				
-				<div id="contlista"></div>
+			<div class="col-md-12">
+				<div class="head"><h3>TODO APP</h3></div>
 			</div>
-		</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<textarea class="form-control" id="cajalista" rows="3" placeholder="Añadir nueva tarea"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<button type="button" class="glyphicon glyphicon-plus btn btn-primary" onclick="agregaTarea()">Agregar</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div id=cont-nuevatarea></div>
+			</div>
+		</div>
 	</section>
 
 <script src='js/main.js'></script>

@@ -1,11 +1,18 @@
 * {
     box-sizing: border-box;
+
+}
+
+body {
+	background-image: url('../img/twitter.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .head {
 	text-align: center;
 	background-color: rgb(24, 84, 203);
-	margin-top: 20%;
+	margin-top: 10%;
 	width: 100%;
 	height: 60px;
 	border-radius: 5px;
@@ -26,24 +33,50 @@ textarea {
     margin-bottom: 5%;
 }
 
-.trash {
-	float: right;
-}
-
 input {
 	display: inline;
+	padding-right: 15px;
 }
+
 p {
 	display: inline;
-	padding-left: 5%;
+	padding-right: 10%;
 }
 
-#contlista {
-	margin-top: 5%;
-
+button {
+	font-weight: bold;
 }
 
 .tachado {
   text-decoration: line-through;
 }
 
+.corazon {
+	color:red;
+}
+
+.glyphicon-trash {
+	float: right;
+	font-size: 25px;
+	padding-right: 15px;
+
+}
+
+.glyphicon-heart {
+	float: right;
+	padding-right: 3%;
+	font-size: 25px;
+
+}
+
+#cont-nuevatarea{
+	margin: 40px;
+	background-color: white;
+	padding: 20px;
+}
+
+
+.textolista {
+	font-size: 20px;
+	margin-left: 10px;
+}
